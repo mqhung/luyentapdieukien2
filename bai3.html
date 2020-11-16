@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Square Area</title>
+</head>
+<body>
+<h2>Diện tích hình vuông</h2>
+<label for="canh">Nhập chiều dài cạnh (m)</label> <br> <br>
+<input type="text" id="canh"> <br> <br>
+<input type="button" value="Area" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay(){
+        let a = +document.getElementById('canh').value;
+        let area = a*a;
+        document.getElementById('result').innerHTML = "Diện tích hình vuông là "+ area + " m2";
+    }
+</script>
+</html>

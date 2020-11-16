@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Triangel Area</title>
+</head>
+<body>
+<h2>Diện tích tam giác vuông</h2>
+<label for="canha">Nhập chiều dài cạnh a(m)</label> <br> <br>
+<input type="text" id="canha"> <br> <br>
+<label for="canhb">Nhập chiều dài cạnh b(m)</label> <br> <br>
+<input type="text" id="canhb"> <br> <br>
+<input type="button" value="Area" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay(){
+        let a = +document.getElementById('canha').value;
+        let b = +document.getElementById('canhb').value;
+        let area = 1/2*a*b;
+        document.getElementById('result').innerHTML = "Diện tích hình vuông là "+ area + " m2";
+    }
+</script>
+</html>

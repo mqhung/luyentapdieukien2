@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<h2>Giải phương trình bậc 2 có dạng sau : ax<sup>2</sup>+bx+c=0</h2>
+<label for="numberA">Nhập hằng số a</label>
+<input type="text" id="numberA"> <br> <br>
+<label for="numberB">Nhập hằng số b</label>
+<input type="text" id="numberB"> <br> <br>
+<label for="numberC">Nhập hằng số c</label>
+<input type="text" id="numberC"> <br> <br>
+<input type="button" value="Giải PT" onclick="disPlay();">
+<p id="result1"></p>
+<p id="result2"></p>
+</body>
+<script>
+    function disPlay() {
+        let a = +document.getElementById('numberA').value;
+        let b = +document.getElementById('numberB').value;
+        let c = +document.getElementById('numberC').value;
+        let delta = b * b - 4 * a * c;
+        let x = (-b) / (2 * a);
+        let y = (-b + Math.sqrt(delta)) / (2 * a);
+        let z = (-b - Math.sqrt(delta)) / (2 * a);
+        if (delta === 0) {
+            document.getElementById('result1').innerHTML = "Phương trình có 2 nghiệm là: " + x;
+        }
+        else if (delta > 0) {
+            document.getElementById('result1').innerHTML = " Phương trình có 2 nghiệm là: " + y;
+            document.getElementById('result2').innerHTML = " Phương trình có 2 nghiệm là: " + z;
+        } else {
+            document.getElementById('result1').innerHTML = " Phương trình vô nghiệm";
+            document.getElementById('result2').innerHTML = " ";
+        }
+    }
+</script>
+</html>
